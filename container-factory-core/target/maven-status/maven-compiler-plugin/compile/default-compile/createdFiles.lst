@@ -1,0 +1,4 @@
+com\github\imthenico\containerfactory\ContainerModule.class
+com\github\imthenico\containerfactory\ContainerFactory$ContainerProvider.class
+com\github\imthenico\containerfactory\UpdatableContainer.class
+com\github\imthenico\containerfactory\ContainerFactory.class

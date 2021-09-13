@@ -37,11 +37,6 @@ public class ContainerFactory {
     }
 
     @SuppressWarnings("unchecked")
-    public static <T extends Inventory> T createContainer(InventoryType type, World world) {
-        return createContainer((Class<? extends T>) classesByType.get(type), type.getDefaultTitle(), type.getDefaultSize(), world);
-    }
-
-    @SuppressWarnings("unchecked")
     public static <T extends Inventory> T createContainer(InventoryType type, String name, int size, World world) {
         return createContainer((Class<? extends T>) classesByType.get(type), name != null ? name : type.getDefaultTitle(), size, world);
     }
@@ -62,7 +57,7 @@ public class ContainerFactory {
         }
     }
 
-    private static ContainerModule getModule() {
+    public static ContainerModule getModule() {
         if (PROVIDERS == null) {
             findAnyModule();
         } else if (PROVIDERS == EMPTY_MODULE) {
